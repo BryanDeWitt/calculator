@@ -1,0 +1,111 @@
+*{
+    font-size: larger;
+    font-weight: 900;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#container{
+    width: 400px;
+    height: 550px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(100, 99, 99);
+    border-radius: 20px;
+    box-shadow: 5px 5px 6px rgb(163, 163, 163) inset, 10px 10px 20px rgb(143, 143, 143);
+}
+
+
+.screen{
+    border: 1px solid black;
+    width: 350px;
+    height: 80px;
+    margin: 20px;
+    background-color: rgb(132, 189, 189);
+    border-radius: 10px;
+    box-shadow: 10px 10px 25px rgb(110, 112, 112) inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+
+.buttons > div{
+    border: 1px solid black;
+    height: 60px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 0px rgb(71, 71, 71);
+}
+
+#zero{
+    width: 195px;
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 0px rgb(71, 71, 71);
+}
+
+.zequal{
+    display: flex;
+    
+}
+
+.zequal > div{
+    border: 1px solid black;
+    height: 60px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 0px rgb(71, 71, 71);
+}
+
+
+.buttons > div:hover{
+    background-color: rgb(180, 180, 180);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.zequal > div:hover{
+    background-color: rgb(180, 180, 180);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#zero:hover{
+    background-color: rgb(180, 180, 180);
+    box-shadow: none;
+    cursor: pointer;
+}
