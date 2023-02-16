@@ -37,6 +37,7 @@ let equal = document.querySelector('.equals')
 let negative = document.querySelector('.negative')
 let screenUp = document.querySelector('.screenUp')
 let screenDown = document.querySelector('.screenDown')
+let audio = document.querySelector('audio')
 
 
 numbers.forEach(number => number.addEventListener('click', e =>{
@@ -75,9 +76,9 @@ equals.addEventListener('click', () => {
     let num2 = parseFloat(currentValue);
     let operand = operator;
     let result = operate(num1, num2, operand)
-    if(result === 69) result = '( ͡° ͜ʖ ͡°)'
-    currentValue = '';
-    previousValue = result;
+    if(result === 69) {result = '( ͡° ͜ʖ ͡°)'; audio.play()}
+    currentValue = result;
+    previousValue = '';
     operator = '';
     screenUp.textContent = previousValue 
     screenDown.textContent = currentValue
@@ -91,6 +92,20 @@ function handleNumber(num){
 }
 
 function handleOperator(op){
+    if(previousValue !== ''){
+        let num1 = parseFloat(previousValue);
+        let num2 = parseFloat(currentValue);
+        let operand = operator;
+        let result = operate(num1, num2, operand)
+        if(result === 69) {result = '( ͡° ͜ʖ ͡°)'; audio.play()}
+        currentValue = result;
+        previousValue = '';
+        operator = '';
+        screenUp.textContent = previousValue 
+        screenDown.textContent = currentValue
+    }else if(operator !== ''){
+        operator = '';
+    }
     operator = op;
     previousValue = currentValue;
     currentValue = '';
