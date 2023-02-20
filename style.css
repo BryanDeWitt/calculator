@@ -47,7 +47,7 @@ body{
 }
 
 
-.buttons > div{
+.buttons > div, .zequal > div{
     border: 1px solid black;
     height: 60px;
     width: 90px;
@@ -63,33 +63,13 @@ body{
 #zero{
     width: 195px;
     height: 60px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 5px 5px 0px rgb(71, 71, 71);
 }
 
 .zequal{
-    display: flex;
-    
+    display: flex; 
 }
 
-.zequal > div{
-    border: 1px solid black;
-    height: 60px;
-    width: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 5px 5px 0px rgb(71, 71, 71);
-}
+
 
 .buttons>div:active, .zequal>div:active, #zero:active{
     background-color: rgb(180, 180, 180);
